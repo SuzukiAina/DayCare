@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ClassroomList</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/index">Daycare System</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="/studentlist">Student List</a>
+                </li>
+                <li>
+                    <a href="/teacherlist">Teacher List</a>
+                </li>
+                <li>
+                    <a href="/classroom">Classroom Management</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Regitration day</th>
+            <th>hib</th>
+            <th>dTap</th>
+            <th>pollio</th>
+            <th>hepatitisB</th>
+            <th>mMR</th>
+            <th>varicella</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student:${student}">
+<!--            <td th:text="${student.id}"></td>-->
+<!--            <td th:text="${student.age}"></td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
